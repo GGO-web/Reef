@@ -1,0 +1,141 @@
+// :root {
+//    --header-height: 80px;
+// }
+
+.header {
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   z-index: 10;
+   min-height: var(--header-height);
+   background-color: var(--color-white);
+   transition: background-color 0.3s ease-in-out;
+
+   &__logo {
+      position: relative;
+      z-index: 5;
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--color-primary);
+
+      @extend %font-large;
+   }
+
+   &__cart {
+      position: relative;
+      z-index: 5;
+      margin-right: $offset-middle;
+   }
+
+   &-top {
+      margin-top: 46px;
+      border-bottom: 0.5px solid #c6c6d9;
+      padding-bottom: 19px;
+
+      &__wrapper {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+
+   &-main {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 30px;
+
+      &__right {
+         display: flex;
+         flex: 1 1 100%;
+         align-items: center;
+      }
+
+      &__login {
+         display: inline-block;
+         flex: 0 0 24px;
+         margin-right: 20px;
+         width: 24px;
+         height: 30px;
+         background-image: url("../img/svg/user.svg");
+         background-size: cover;
+      }
+   }
+
+   &-top__link {
+      margin-right: 47px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   &-top__location {
+      position: relative;
+      margin-right: 47px;
+      margin-left: 26px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: -26px;
+         top: -7px;
+         margin: 5px;
+         width: 21px;
+         height: 30px;
+         background-image: url("../img/svg/location.svg");
+         background-position: center;
+         background-size: cover;
+      }
+   }
+
+   &-top__contacts {
+      position: relative;
+      margin-right: 33px;
+
+      &::after {
+         content: "";
+         position: absolute;
+         right: -33px;
+         top: -7px;
+         margin: 5px 0 5px 5px;
+         width: 28px;
+         height: 30px;
+         background-image: url("../img/svg/contacts.svg");
+         background-position: center;
+         background-size: cover;
+      }
+   }
+
+   &__menu {
+      margin-top: 56px;
+   }
+
+   &-main__left {
+      display: flex;
+      align-items: flex-end;
+      margin-right: 88px;
+   }
+
+   &-main__form {
+      flex: 1 1 100%;
+      margin-right: 36px;
+   }
+
+   &__burger {
+      margin-right: 59px;
+      margin-bottom: 7px;
+   }
+
+   @media (max-width: $md) {
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         z-index: 4;
+         background-color: var(--color-white);
+      }
+   }
+}

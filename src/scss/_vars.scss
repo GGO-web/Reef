@@ -1,0 +1,35 @@
+:root {
+   // ==!> Colors <!==
+   --color-black: #130f2c;
+   --color-white: #fff;
+   --color-primary: #3b44c0;
+   --color-pink: #bf2670;
+   --color-light-grey: #eff0f3;
+   --color-green: #8dc967;
+   --color-dark-grey: #929090;
+
+   // font-family name
+   --font-family: "Open Sans";
+
+   // blocks properties
+   --border-value: 10px;
+
+   // grid template layout
+   --grid-column: 76px;
+   --grid-gap: 24px;
+}
+
+// font size properties
+$font-size-large: 48px;
+$font-size-title: 36px;
+$font-size-text: 20px;
+$font-size-x-middle: 18px;
+$font-size-middle: 16px;
+$font-size-small: 14px;
+$font-size-extra-small: 12px;
+
+// offsets
+$offset-large: 120px;
+$offset-middle: 30px;
+$offset-small: 20px;
+$offset-smallest: 10px;

@@ -1,0 +1,105 @@
+include basic/mixin
+
+header.header
+   .header__top.header-top
+      .container.header-top__wrapper
+         .header-top__links
+            a.header-top__link(href="#")
+               | Магазины
+            a.header-top__link(href="#")
+               | Оплата и доставка
+         .header-top__actions
+            button.header-top__location.popup.btn-reset(aria-modal="true" role="dialog")
+               span.header-top__location-city Минск
+            button.header-top__contacts.popup.btn-reset(aria-modal="true" role="dialog")
+               span.header-top__contacts-text +375 (44) 157–02–54
+   .container
+      .header__main.header-main
+         .header-main__left
+            button.header__burger.menu__burger.burger.btn-reset(aria-label='Открыть меню' aria-expanded='false' aria-modal="true" role="dialog")
+               span.burger__line
+            a.header__logo.logo.logo--primary
+               | reef
+         .header-main__right
+            form.header-main__form.search-form(action='#')
+               label.search-form__label
+                  span.visually-hidden
+                     | Введите поисковый запрос
+                  input.search-form__input.input#search-input(placeholder='Найти товар' name='search' type='text' required)
+               button.search-form__button.btn-reset(aria-label="Найти товар")
+            a.header-main__login(href="#!" aria-label="Перейти в личный кабинет")
+            a.header-main__cart.cart.btn-reset(href="#!" aria-label="Перейти в корзину")
+               span.cart__quantity 15
+               span.cart__price (129,50 руб.)
+      nav#menu.header__menu.menu
+         ul.header__menu-list.menu__list
+            li.header__menu-item.menu__item
+               a.menu__link(href='#') Живые обитатели
+               button.menu__item-arrow.btn-reset(aria-label="Открыть список" aria-expanded='false')
+               ul.menu__sublist.menu-sublist
+                  li.menu-sublist__item
+                     a.menu-sublist__link(tabindex='-1' href='#')
+                        | Рыбки
+                        sup.menu-sublist__link-count 76
+                  li.menu-sublist__item
+                     a.menu-sublist__link(tabindex='-1' href='#')
+                        | Беспозвоночные
+                        sup.menu-sublist__link-count 12
+                  li.menu-sublist__item
+                     a.menu-sublist__link(tabindex='-1' href='#')
+                        | Земноводные
+                        sup.menu-sublist__link-count 6
+                  li.menu-sublist__item
+                     a.menu-sublist__link(tabindex='-1' href='#')
+                        | Рептилии
+                        sup.menu-sublist__link-count 5
+               li.header__menu-item.menu__item
+                  a.menu__link(href='#') Декорации
+                  button.menu__item-arrow.btn-reset(aria-label="Открыть список" aria-expanded='false')
+                  ul.menu__sublist.menu-sublist
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 1
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 2
+               li.header__menu-item.menu__item
+                  a.menu__link(href='#') Корм
+                  button.menu__item-arrow.btn-reset(aria-label="Открыть список" aria-expanded='false')
+                  ul.menu__sublist.menu-sublist
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 1
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 2
+               li.header__menu-item.menu__item
+                  a.menu__link(href='#') Аквариумы
+                  button.menu__item-arrow.btn-reset(aria-label="Открыть список" aria-expanded='false')
+                  ul.menu__sublist.menu-sublist
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 1
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 2
+               li.header__menu-item.menu__item
+                  a.menu__link(href='#') Химия и лекарства
+                  button.menu__item-arrow.btn-reset(aria-label="Открыть список" aria-expanded='false')
+                  ul.menu__sublist.menu-sublist
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 1
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 2
+               li.header__menu-item.menu__item
+                  a.menu__link(href='#') Аксессуары
+                  button.menu__item-arrow.btn-reset(aria-label="Открыть список" aria-expanded='false')
+                  ul.menu__sublist.menu-sublist
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 1
+                     li.menu-sublist__item
+                        a.menu-sublist__link(tabindex='-1' href='#')
+                           | Пункт 2

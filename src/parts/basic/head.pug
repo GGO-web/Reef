@@ -1,0 +1,26 @@
+block head_vars
+   - var title = "Reef - Главная страница";
+
+doctype html
+html(lang="ru")
+   head
+      meta(charset="UTF-8")
+      meta(name="description" content="")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+      title #{title}
+
+      //- includes fonts
+      link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet")
+
+      //- includes styles
+      link(rel="stylesheet" href="css/vendor.min.css")
+      link(rel="stylesheet" href="css/style.min.css")
+
+      //- includes scripts
+      script(src="js/vendor.min.js", defer)
+      script(src="js/script.min.js", defer)
+   body
+      .site-container
+         block content

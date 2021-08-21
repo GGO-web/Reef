@@ -1,0 +1,35 @@
+.cart {
+   position: relative;
+   z-index: 5;
+   display: inline-flex;
+   flex-shrink: 0;
+   align-items: flex-end;
+
+   &::before {
+      content: "";
+      margin: 5px;
+      width: 26px;
+      height: 30px;
+      background-image: url("../img/svg/cart.svg");
+      background-position: center;
+      background-size: cover;
+   }
+
+   &__quantity {
+      position: absolute;
+      left: 19px;
+      top: 0;
+      border-radius: var(--border-value);
+      padding: 1px 10px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.333;
+      color: var(--color-white);
+      background-color: var(--color-primary);
+   }
+
+   &__price {
+      margin-bottom: 5px;
+      font-size: $font-size-small;
+   }
+}

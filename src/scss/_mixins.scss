@@ -1,0 +1,24 @@
+@import "./mixins/strip_unit";
+@import "./mixins/responsive";
+@import "./mixins/breakpoints";
+@import "./mixins/font-face";
+@import "./mixins/burger";
+@import "./mixins/eclipse";
+
+%font-large {
+   @include responsive(font-size, $font-size-large, $font-size-title, $xxl, $md);
+}
+
+%font-title {
+   font-weight: 600;
+
+   @include responsive(font-size, $font-size-title, $font-size-middle, $xxl, $md);
+}
+
+%font-middle {
+   @include responsive(font-size, $font-size-middle, $font-size-small, $xxl, $md);
+}
+
+%font-text {
+   @include responsive(font-size, $font-size-text, $font-size-x-middle, $xxl, $md);
+}

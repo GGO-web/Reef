@@ -1,0 +1,64 @@
+// @import "common/example";
+@import "common/buttons";
+@import "common/menu";
+@import "common/search-form";
+@import "common/cart";
+
+// ==!> Most Common styles <!==
+.title {
+   position: relative;
+   margin: 0;
+   margin-bottom: 40px;
+   max-width: calc(4 * (var(--grid-column) + var(--grid-gap)));
+
+   @extend %font-title;
+}
+
+.text {
+   margin: 0;
+
+   @extend %font-text;
+}
+
+.--hover-underline {
+   position: relative;
+   transition: color 0.15s ease-in-out;
+
+   &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 1px;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.25s cubic-bezier(1, 0.54, 0.04, 0.61);
+   }
+
+   @media (any-hover: hover) {
+      &:hover::before {
+         left: 0;
+         width: 100%;
+      }
+   }
+}
+
+.main {
+   margin-top: var(--header-height);
+}
+
+.discount {
+   border-radius: var(--border-value);
+   padding: 4px 14px;
+   font-weight: 700;
+   font-size: $font-size-small;
+   color: var(--color-white);
+   background-color: var(--color-red);
+}
+
+.popup {
+   border-bottom: 1px dashed var(--color-primary);
+   padding: 0 5px 4px;
+}
+
+// ==!> Most Common styles <!==
