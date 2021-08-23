@@ -43,10 +43,6 @@
    }
 }
 
-.main {
-   margin-top: var(--header-height);
-}
-
 .discount {
    border-radius: var(--border-value);
    padding: 4px 14px;
@@ -54,6 +50,22 @@
    font-size: $font-size-small;
    color: var(--color-white);
    background-color: var(--color-red);
+}
+
+.link {
+   display: inline-block;
+   border: 1px solid currentColor;
+   padding: 10px 40px;
+   font-size: $font-size-middle;
+   line-height: 1.333;
+   text-align: center;
+   transition: border-radius 0.2s ease-out;
+
+   @media (any-hover: hover) {
+      &:hover {
+         border-radius: 15px 0;
+      }
+   }
 }
 
 // ==!> Most Common styles <!==

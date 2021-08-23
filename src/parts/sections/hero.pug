@@ -1,0 +1,13 @@
+section.hero
+   .hero__wrapper
+      .container
+         .hero__slider
+            .hero__slider-wrapper
+               - for (var i = 0; i < 3; i++)
+                  .hero__slide
+                     h2.hero__slide-title
+                        strong.hero__slide-title-bolder Скидка 15%
+                        | на первый заказ при покупке от 50,00 руб.
+                     a.hero__slide-catalog.link(href="#")
+                        | В каталог
+            .hero__slider-pagination
