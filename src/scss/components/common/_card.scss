@@ -1,0 +1,86 @@
+.card {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid var(--color-blue-grey);
+   width: 180px;
+   min-height: 380px;
+   font-size: $font-size-small;
+
+   &__image {
+      margin-bottom: 10px;
+      width: 174px;
+      height: 174px;
+   }
+
+   &__title {
+      margin: 0;
+      margin-left: 10px;
+      font-weight: 600;
+      font-size: inherit;
+   }
+
+   &__footer {
+      margin-top: auto;
+      padding: 8px;
+   }
+
+   &__prices {
+      margin-bottom: 15px;
+   }
+
+   &__current-price {
+      margin-right: 10px;
+      font-weight: 600;
+   }
+
+   &__old-price {
+      font-size: $font-size-x-small;
+      text-decoration-line: line-through;
+      color: rgba(19, 15, 44, 0.5);
+   }
+
+   &__actions {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+   }
+
+   &__favorite {
+      margin-left: 15px;
+   }
+
+   &__tags {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: -3px;
+      max-width: 150px;
+   }
+
+   &__tag {
+      margin: 3px;
+      border-radius: 5px;
+      padding: 3px 6px;
+
+      &:last-child {
+         margin-right: 0;
+      }
+
+      &--sale {
+         background-color: var(--color-orange);
+      }
+
+      &--new {
+         background-color: var(--color-green);
+      }
+   }
+
+   &__button {
+      font-weight: 600;
+      font-size: $font-size-x-small;
+      color: var(--color-smooth-blue);
+   }
+}
