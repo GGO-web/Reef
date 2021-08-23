@@ -145,6 +145,11 @@ body {
    @extend %font-text;
 }
 
+small {
+   font-size: $font-size-x-small;
+   text-transform: uppercase;
+}
+
 .container {
    --content-offset: 15px;
 

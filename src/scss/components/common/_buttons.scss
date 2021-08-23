@@ -1,17 +1,19 @@
 .button {
    position: relative;
    display: inline-block;
+   border: 1px solid var(--color-primary);
    padding: 12px 18px;
    font-size: $font-size-middle;
    line-height: 1.333;
    text-align: center;
    color: var(--color-white);
    background-color: var(--color-primary);
-   transition: background-color 0.2s ease-out;
+   transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
    @media (any-hover: hover) {
       &:hover {
-         background-color: var(--color-blue);
+         color: var(--color-primary);
+         background-color: transparent;
       }
    }
 }

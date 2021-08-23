@@ -9,10 +9,31 @@ header.header
             a.header-top__link(href="#")
                | Оплата и доставка
          .header-top__actions
-            button.header-top__location.popup.btn-reset(aria-modal="true" role="dialog")
+            .header-top__location(aria-modal="true" role="dialog")
                span.header-top__location-city Минск
-            button.header-top__contacts.popup.btn-reset(aria-modal="true" role="dialog")
-               span.header-top__contacts-text +375 (44) 157–02–54
+            .header-top__contacts(aria-modal="true" role="dialog")
+               a.header-top__contacts-trigger(href="tel:375441570254") +375 (44) 157–02–54
+               .header-top__contacts-wrapper
+                  p.header-top__contacts-title.header-top__contacts-item.text
+                     | Часы работы
+                  time.header-top__contacts-item
+                     span.header-top__contacts-schedule
+                        small пн-пт
+                        | с 8.00 до 21.00
+                     span.header-top__contacts-schedule
+                        small сб-вс
+                        | с 9.00 до 20.00
+                  .header-top__contacts-item
+                     a.header-top__contacts-tel(href="tel:375441570254")
+                        | +375 (44) 157-02-54
+                        small a1
+                     a.header-top__contacts-tel(href="tel:375336945736")
+                        | +375 (33) 694-57-36
+                        small мтс
+                  a.header-top__contacts-button.button.btn-reset.header-top__contacts-item(href="#")
+                     | Перезвоните мне
+                  a.header-top__contacts-item.header-top__contacts-mail(href="mailto:reef_mail@gmail.com")
+                     | reef_mail@gmail.com
    .container
       .header__main.header-main
          .header-main__left
