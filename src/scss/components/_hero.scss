@@ -58,12 +58,14 @@
       align-items: center;
       justify-content: center;
       width: auto !important;
+      max-width: 100%;
       background-color: var(--color-blue-grey);
    }
 
    &__slider-bullet {
       width: 57px;
       height: 3px;
+      max-width: 100%;
       background-color: var(--color-grey);
       transition: background-color 0.2s ease-in-out;
 
@@ -100,31 +102,4 @@
 
       @extend %font-middle;
    }
-
-   // @media (max-width: $lg) {
-   //    &__slider {
-   //       align-items: flex-start;
-   //       padding: $offset-small 0 40px;
-   //       background-attachment: initial;
-   //    }
-
-   //    &__slide {
-   //       flex-wrap: wrap;
-   //    }
-
-   //    &__slide-text,
-   //    &__slide-title {
-   //       max-width: 100%;
-   //    }
-   // }
-
-   // @media (max-width: $sm) {
-   //    &__slide-text {
-   //       margin-bottom: $offset-middle;
-   //    }
-
-   //    &__slide-catalog {
-   //       width: 100%;
-   //    }
-   // }
 }

@@ -1,0 +1,38 @@
+block card_vars
+   -
+      var card_object = {
+         "image_src": "../img/products/product-1.png",
+         "title": "Черный телескоп",
+         "measure": "1&nbsp;шт.",
+         "tag_list": [
+            {
+               "class": "card__tag--sale",
+               "name": "-15%",
+            },
+            {
+               "class": "card__tag--new",
+               "name": "новинка",
+            }
+         ],
+         "current_price": "8,00 руб.",
+         "old_price": "10,00 руб.",
+      }
+
+mixin card(card_object)
+   article.card
+      .card__wrapper
+         header.card__header
+            img.card__image(src=card_object.image_src alt=card_object.title + " " + card_object.measure)
+            h3.card__title !{card_object.title + " " + card_object.measure}
+            ul.card__tags
+               each tag in card_object.tag_list
+                  li(class=`card__tag ${tag.class}`) #{tag.name}
+         footer.card__footer
+            .card__prices
+               span.card__current-price #{card_object.current_price}
+               span.card__old-price #{card_object.old_price}
+            .card__actions
+               include ../components/stepper.pug
+               button.card__favorite.btn-reset
+                  +svg("card__favorite-icon", "heart", "width: 19px; height: 18px;")
+            button.card__button.button.btn-reset Добавить в корзину

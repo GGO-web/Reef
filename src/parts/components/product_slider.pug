@@ -1,0 +1,129 @@
+include ../mixins/card.pug
+
+block product_vars
+   -
+      var title = "Акции";
+      var cards = [
+         {
+            "image_src": "../img/products/product-1.png",
+            "title": "Черный телескоп <br>",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-15%",
+               },
+            ],
+            "current_price": "8,00 руб.",
+            "old_price": "10,00 руб.",
+         },
+         {
+            "image_src": "../img/products/product-2.png",
+            "title": "Креветка красная Red Cherry",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "2,5 руб.",
+            "old_price": "5,00 руб.",
+         },
+         {
+            "image_src": "../img/products/product-3.png",
+            "title": "Окатанные камни вулканической лавы серой",
+            "measure": "1&nbsp;кг.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-15%"
+               },
+            ],
+            "current_price": "8,50 руб.",
+            "old_price": "10,00 руб.",
+         },
+         {
+            "image_src": "../img/products/product-4.png",
+            "title": "Лимнобиум побегоносный",
+            "measure": "",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "1,50 руб.",
+            "old_price": "3,00 руб.",
+         },
+         {
+            "image_src": "../img/products/product-5.png",
+            "title": "Артемия сублимированная Barrom",
+            "measure": "100&nbsp;гр.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-20%"
+               },
+            ],
+            "current_price": "6,40 руб.",
+            "old_price": "8,00 руб.",
+         },
+         {
+            "image_src": "../img/products/product-6.png",
+            "title": "Драконий камень",
+            "measure": "1&nbsp;кг.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-20%"
+               },
+            ],
+            "current_price": "11,60 руб.",
+            "old_price": "14,50 руб.",
+         },
+         {
+            "image_src": "../img/products/product-4.png",
+            "title": "Лимнобиум побегоносный",
+            "measure": "",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "1,50 руб.",
+            "old_price": "3,00 руб.",
+         },
+         {
+            "image_src": "../img/products/product-2.png",
+            "title": "Креветка красная Red Cherry",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "2,5 руб.",
+            "old_price": "5,00 руб.",
+         },
+      ];
+
+section.products
+   .container
+      .products__header
+         h2.products__title.title #{title}
+         a.products__more(href="#!")
+            | Смотреть все
+      .products__slider
+         .products__slider-wrapper
+            each card in cards
+               .products__slide
+                  +card(card)
+         .products__slider-pagination
+         .products__slider-navigation
+            button.products__slider-button.products__slider-button-prev.btn-reset
+               +svg("products__slider-button-icon", "arrow-left", "width: 12px; height: 21px;")
+            button.products__slider-button.products__slider-button-next.btn-reset
+               +svg("products__slider-button-icon", "arrow-right", "width: 12px; height: 21px;")
