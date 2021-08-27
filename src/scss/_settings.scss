@@ -158,3 +158,7 @@ small {
    padding: 0 var(--content-offset);
    max-width: calc(1176px + 2 * var(--content-offset));
 }
+
+section {
+   @include responsive(margin-bottom, $offset-large, $offset-middle, $xxl, $sm);
+}

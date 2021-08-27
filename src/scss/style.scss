@@ -6,10 +6,14 @@
 // import individual blocks
 @import "./components/common";
 
+// import templates
+@import "./components/products";
+
 // ==!> Site Components <!==
 
 @import "./components/header";
 @import "./components/hero";
-@import "./components/products";
+@import "./components/services";
+@import "./components/promotions";
 
 // ==!> Site Components <!==

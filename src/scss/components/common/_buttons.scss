@@ -10,6 +10,18 @@
    background-color: var(--color-primary);
    transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
+   &--nofilled {
+      color: var(--color-primary);
+      background-color: transparent;
+      transition: border-radius 0.2s ease-out;
+
+      @media (any-hover: hover) {
+         &:hover {
+            border-radius: 15px 0;
+         }
+      }
+   }
+
    @media (any-hover: hover) {
       &:hover {
          color: var(--color-primary);

@@ -1,0 +1,28 @@
+block promotions_vars
+   -
+      var items = [
+         {
+            "background_src": "",
+            "title": "",
+            "text": "",
+            "background_gradient": ""
+         },
+         {
+            "background_src": "./img/promotions/promo-2.jpg",
+            "title": "<span class='promotions__item-sale'>-20%</span> на сухие корма фирмы Barrom",
+            "text": "",
+            "background_gradient": "linear-gradient(0deg, rgba(141, 201, 103, 0.2), rgba(141, 201, 103, 0.2))"
+         },
+      ]
+
+section.promotions
+   .container
+      h2.promotions__title.title.visually-hidden Промо акции и подсказки
+      ul.promotions__items
+         li.promotions__item.promotions__compare
+            h3.promotions__item-title Сравнение аквариумных рыбок
+            p.promotions__item-text.text Нажмите на значок <span aria-hidden="true"></span> рядом с понравившейся рыбкой и узнайте, подходят ли они друг другу.
+         li.promotions__item.promotions__sales(style="")
+            h3.promotions__item-title <span>-20%</span> на сухие корма фирмы Barrom
+            img.promotions__image(src="./img/promotions/promo-2.png" alt="Корм для аквариумных рыб Гаммарус(измельчённый и обычный), Дафния")
+

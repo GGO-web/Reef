@@ -1,0 +1,30 @@
+block services_vars
+   -
+      var items = [
+         {
+            "image_src": "./img/services/service-1.jpg",
+            "title": "Обслуживание аквариума",
+            "text": "Подмена воды, чистка стекол, очистка и профилактика систем жизнеобеспечения аквариума и другие работы для хорошей работы аквариума.",
+            "price": "60,00",
+         },
+         {
+            "image_src": "./img/services/service-2.jpg",
+            "title": "Оформление аквариума",
+            "text": "Изготовление аквариума под необходимые размеры, индивидуальный дизайн для вашего интерьера.",
+            "price": "250,00",
+         },
+      ]
+
+section.services
+   .container
+      h2.services__title.title Услуги
+      ul.services__list
+         each item in items
+            li.services__item
+               img.services__item-image(src=item.image_src alt=item.title)
+               .services__item-content
+                  h3.services__item-title !{item.title}
+                  p.services__item-text.text !{item.text}
+                  span.services__item-price от !{item.price} руб
+                  button.services__item-button.button.button--nofilled.btn-reset
+                     | Подробнее
