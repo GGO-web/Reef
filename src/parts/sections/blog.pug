@@ -1,0 +1,49 @@
+block blog_vars
+   -
+      var title = "Блог";
+      var posts = [
+         {
+            "image_src": "./img/blog/blog-1.jpg",
+            "date": "15 мая 2021",
+            "title": "Аквариумные растения: как избежать ошибок",
+            "text": "Для активного фотосинтеза, а значит правильного развития и роста, растения нуждаются в присутствии ",
+         },
+         {
+            "image_src": "./img/blog/blog-2.jpg",
+            "date": "30 апреля 2021",
+            "title": "Как выбрать жителей для аквариума",
+            "text": "Аквариумные рыбки – важная составляющая красоты и колоритности аквариума. Однако следует иметь ввиду ",
+         },
+         {
+            "image_src": "./img/blog/blog-3.jpg",
+            "date": "18 апреля 2021",
+            "title": "Аквариумные рыбки: яркий окрас – секреты природы",
+            "text": "Аквариумные рыбки привлекают наше внимание в первую очередь своими яркими необычными окрасами. Это ",
+         },
+         {
+            "image_src": "./img/blog/blog-4.jpg",
+            "date": "10 марта 2021",
+            "title": "Кормление аквариумных рыб",
+            "text": "Внешний вид и здоровье вашего аквариума напрямую зависит от того, как и чем вы кормите аквариумных рыб",
+         },
+
+      ];
+section.blog.section
+   .container
+      .blog__inner
+         .section__header
+            h2.section__title.title #{title}
+            a.section__more(href="#!")
+               | Смотреть все
+         ul.blog__list
+            each post in posts
+               li.blog__item
+                  acticle.blog__post.post
+                     header.post__header
+                        a.post__link(href="#!")
+                           img.post__image(src=post.image_src, alt=post.title)
+                        time.post__date !{post.date}
+                        h3.post__title
+                           a.post__link(href="#!") !{post.title}
+                     p.post__text.text !{post.text}
+

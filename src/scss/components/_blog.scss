@@ -1,0 +1,7 @@
+@import "./common/post";
+
+.blog__list {
+   display: grid;
+   grid-gap: 21px;
+   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}

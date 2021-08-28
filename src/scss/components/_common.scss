@@ -70,4 +70,38 @@
    }
 }
 
+.section {
+   @include responsive(margin-bottom, $offset-large, $offset-middle, $xxl, $sm);
+}
+
+.section__header {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   margin: 0 0 25px;
+}
+
+.section__title {
+   margin-bottom: 0;
+}
+
+.section__more {
+   display: inline-block;
+   font-weight: 600;
+
+   &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 4px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/sprite.svg#arrow-right");
+      background-position: center;
+      background-size: cover;
+   }
+
+   @extend %font-middle;
+}
+
 // ==!> Most Common styles <!==

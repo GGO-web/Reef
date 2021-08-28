@@ -13,36 +13,6 @@
       flex: 1 0 auto;
    }
 
-   &__header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      margin: 25px 0;
-   }
-
-   &__title {
-      margin-bottom: 0;
-   }
-
-   &__more {
-      display: inline-block;
-      font-weight: 600;
-
-      &::after {
-         content: "";
-         display: inline-block;
-         vertical-align: middle;
-         margin-left: 4px;
-         width: 24px;
-         height: 24px;
-         background-image: url("../img/sprite.svg#arrow-right");
-         background-position: center;
-         background-size: cover;
-      }
-
-      @extend %font-middle;
-   }
-
    &__slider-pagination {
       display: inline-flex;
       align-self: flex-end;
