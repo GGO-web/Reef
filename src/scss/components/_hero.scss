@@ -35,6 +35,11 @@
          background-position: center;
          background-size: cover;
          background-repeat: no-repeat;
+
+         @media (max-width: $sm) {
+            background: linear-gradient(270deg, #170f28 8.13%, rgba(0, 0, 0, 0) 10.31%),
+               linear-gradient(90deg, #373dab 18.11%, rgba(72, 82, 176, 0) 27.36%);
+         }
       }
    }
 
@@ -46,7 +51,10 @@
 
    &__slider-wrapper {
       display: flex;
-      padding: 100px 0 150px;
+      // padding: 100px 0 150px;
+
+      @include responsive(padding-top, 100px, 30px, $xxl, $sm);
+      @include responsive(padding-bottom, 150px, 50px, $xxl, $sm);
    }
 
    &__slider-pagination {
