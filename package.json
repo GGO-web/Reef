@@ -42,5 +42,6 @@
       "stylelint-order": "^4.1.0",
       "stylelint-scss": "^3.19.0",
       "webp-converter": "^2.2.3"
-   }
+   },
+   "dependencies": {}
 }

@@ -1,10 +1,10 @@
 .menu {
+   // display: none;
    &__list {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      margin: 0 -15px;
    }
 
    &__item {
@@ -35,7 +35,6 @@
    }
 
    &__link {
-      margin: 0 15px 4px;
       border-bottom: 0.5px solid transparent;
       font-weight: 600;
       color: var(--color-black);
@@ -119,7 +118,7 @@
    }
 }
 
-@media (max-width: $md) {
+@media (max-width: $lg) {
    .menu {
       position: fixed;
       left: -100%;
@@ -151,11 +150,12 @@
 
       &__item {
          position: relative;
-         align-items: stretch;
          margin-right: 0;
+         padding: 0;
          width: 100%;
 
          &-arrow {
+            display: inline-block;
             width: 20px;
             height: 20px;
          }
@@ -177,7 +177,7 @@
          position: static;
          overflow: hidden;
          margin: 10px 0;
-         padding: 0;
+         padding: 10px;
          max-width: 100%;
          max-height: 0;
          box-shadow: none;

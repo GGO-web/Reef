@@ -29,20 +29,30 @@
    }
 
    &-top {
-      margin-top: 46px;
+      position: relative;
+      z-index: 6;
       border-bottom: 0.5px solid #c6c6d9;
-      padding-bottom: 19px;
+      padding-bottom: 20px;
+
+      @include responsive(padding-top, 46px, 20px, $xxl, $sm);
+      @include responsive(font-size, $font-size-text, $font-size-small, $xxl, $min);
 
       &__wrapper {
          display: flex;
+         flex-wrap: wrap;
          justify-content: space-between;
+      }
+
+      &__links {
+         margin-right: 15px;
       }
    }
 
    &-main {
       display: flex;
       justify-content: space-between;
-      padding-top: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
 
       &__right {
          display: flex;
@@ -51,6 +61,8 @@
       }
 
       &__login {
+         position: relative;
+         z-index: 6;
          display: inline-block;
          flex: 0 0 24px;
          margin-right: 20px;
@@ -62,8 +74,10 @@
    }
 
    &-top__link {
-      margin-right: 47px;
+      // margin-right: 47px;
       transition: color 0.2s ease-in;
+
+      @include responsive(margin-right, 47px, 20px, $xxl, $sm);
 
       &:last-child {
          margin-right: 0;
@@ -78,12 +92,13 @@
 
    &-top__location {
       position: relative;
-      z-index: 6;
       display: inline-block;
-      margin-right: 47px;
+      // margin-right: 47px;
       margin-left: 26px;
       padding: 0 5px 14px;
       cursor: pointer;
+
+      @include responsive(margin-right, 46px, 20px, $xxl, $sm);
 
       &::before {
          content: "";
@@ -111,7 +126,6 @@
 
    &-top__contacts {
       position: relative;
-      z-index: 6;
       display: inline-block;
       margin-right: 33px;
       padding: 0 5px 14px;
@@ -220,18 +234,25 @@
    }
 
    &__menu {
-      margin-top: 56px;
+      margin: 56px 0;
+
+      @media (max-width: $lg) {
+         margin: 30px 0;
+      }
    }
 
    &-main__left {
       display: flex;
       align-items: flex-end;
-      margin-right: 88px;
+      // margin-right: 88px;
+      @include responsive(margin-right, 88px, 20px, $xxl, $sm);
    }
 
    &-main__form {
       flex: 1 1 100%;
-      margin-right: 36px;
+      // margin-right: 36px;
+
+      @include responsive(margin-right, 36px, 20px, $xxl, $sm);
    }
 
    &__burger {
@@ -239,7 +260,7 @@
       margin-bottom: 7px;
    }
 
-   @media (max-width: $md) {
+   @media (max-width: $lg) {
       &::before {
          content: "";
          position: absolute;
@@ -249,6 +270,59 @@
          bottom: 0;
          z-index: 4;
          background-color: var(--color-white);
+      }
+   }
+
+   @media (max-width: $md) {
+      &-top__contacts-trigger {
+         display: none;
+      }
+
+      &-top__contacts::before {
+         display: none;
+      }
+
+      &-top__contacts::after {
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+   }
+
+   @media (max-width: 640px) {
+      &-main {
+         flex-direction: column;
+      }
+
+      &-main__left {
+         margin-bottom: 15px;
+      }
+
+      &-top__location::before {
+         margin-left: 0;
+      }
+   }
+
+   @media (max-width: 480px) {
+      &-top__wrapper {
+         flex-direction: column;
+      }
+
+      &-top__links {
+         margin-right: 0;
+         margin-bottom: 15px;
+      }
+
+      &-top__contacts-trigger {
+         display: initial;
+      }
+
+      &-top__contacts::before {
+         display: initial;
+      }
+
+      &-top__contacts::after {
+         margin-top: 5px;
+         margin-bottom: 5px;
       }
    }
 }

@@ -32,4 +32,14 @@
       margin-bottom: 5px;
       font-size: $font-size-small;
    }
+
+   @media (max-width: $xs) {
+      &__price {
+         display: none;
+      }
+
+      &__quantity {
+         left: 10px;
+      }
+   }
 }
