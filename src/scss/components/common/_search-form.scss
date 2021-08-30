@@ -10,15 +10,8 @@
    }
 
    &__input {
-      display: block;
       padding: 10px 62px 10px 20px;
       width: 100%;
-      font-size: $font-size-small;
-      background-color: var(--color-light-grey);
-
-      &::placeholder {
-         color: var(--color-dark-grey);
-      }
    }
 
    &__button {

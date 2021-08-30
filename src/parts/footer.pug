@@ -1,0 +1,65 @@
+block footer_vars
+   -
+      var descr = "Интернет-магазин аквариумных рыб, растений, кормов, аквариумного оборудования и декора";
+      var copy = "Республика Беларусь, г. Минск, пр-т Победителей 18, офис 314. Свидетельство о государственной регистрации № 21 681 013 от 14.04.2013 выдано Мингорисполкомом. Дата регистрации интернет-магазина reef.by в торговом реестре Республики Беларусь — 21.09.2013. 2013 — 2021 © ОАО «Риф». Все права защищены";
+      var cols = [
+         {
+            "title": "Покупателям",
+            "links" : [
+               "Как сделать заказ",
+               "Обмен и возврат",
+               "Вопросы и ответы",
+               "Полезные статьи",
+               "Договор публичной оферты",
+            ]
+         },
+         {
+            "title": "Сотрудничество",
+            "links" : [
+               "Вакансии",
+               "Мероприятия",
+               "Юридическим лицам",
+               "Торговым представителям",
+            ]
+         },
+         {
+            "title": "Магазины",
+            "links" : [
+               "Минск",
+               "Брест",
+               "Витебск",
+               "Гродно",
+               "Могилев",
+            ]
+         },
+
+      ];
+
+footer.footer
+   .container
+      .footer__top.footer-top
+         .footer-top__left
+            a.footer__logo.logo(href="#!")
+               | reff
+            p.footer-top__description
+               | #{descr}
+            a.footer-top__mail(href="mailto:reef_mail@gmail.com") reef_mail@gmail.com
+            .footer-top__social
+               a.footer-top__social-link(href="#!")
+                  +svg("footer-top__social-icon", "youtube", "width: 40px; height: 30px; fill: #fff;")
+               a.footer-top__social-link(href="#!")
+                  +svg("footer-top__social-icon", "instagram", "width: 30px; height: 23px; fill: #fff;")
+         .footer-top__cols
+            each col in cols
+               .footer-top__col
+                  h3.footer-top__col-title
+                     | #{col.title}
+                  ul.footer-top__list
+                     each link in col.links
+                        li.footer-top__list-item
+                           a.footer-top__list-link(href="#!")
+                              | #{link}
+      .footer__bottom
+         small.footer__copy
+            | #{copy}
+         include ./components/newsletter.pug

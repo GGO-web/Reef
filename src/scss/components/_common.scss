@@ -1,10 +1,12 @@
 // @import "common/example";
 @import "common/buttons";
+@import "common/inputs";
 @import "common/menu";
 @import "common/search-form";
 @import "common/cart";
 @import "common/stepper";
 @import "common/card";
+@import "common/newsletter";
 
 // ==!> Most Common styles <!==
 .title {
@@ -67,6 +69,21 @@
       &:hover {
          border-radius: 15px 0;
       }
+   }
+}
+
+.logo {
+   position: relative;
+   z-index: 5;
+   font-size: 30px;
+   line-height: 1;
+   text-transform: uppercase;
+   color: var(--color-white);
+
+   &--primary {
+      color: var(--color-primary);
+
+      @extend %font-large;
    }
 }
 

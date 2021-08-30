@@ -1,0 +1,32 @@
+.newsletter {
+   &__title {
+      margin: 0;
+      margin-bottom: 15px;
+      font-size: $font-size-small;
+   }
+
+   &__form {
+      display: inline-grid;
+      grid-gap: 20px;
+      grid-template-columns: minmax(200px, 279px) auto;
+   }
+
+   &__form-input {
+      width: 100%;
+
+      &::placeholder {
+         color: #252222;
+      }
+   }
+
+   &__form-button {
+      padding: 10px 28px;
+   }
+
+   @media (max-width: $xs) {
+      &__form {
+         display: grid;
+         grid-template-columns: 1fr;
+      }
+   }
+}
