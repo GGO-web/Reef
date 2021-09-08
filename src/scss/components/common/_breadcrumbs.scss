@@ -1,0 +1,30 @@
+.breadcrumbs {
+   margin: 25px 0;
+}
+
+.breadcrumbs__list {
+   display: flex;
+   align-items: center;
+}
+
+.breadcrumbs__item {
+   display: inline-block;
+   font-size: $font-size-x-small;
+}
+
+.breadcrumbs__item:not(:last-child) {
+   color: var(--color-textgray);
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+   content: "";
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0 6px;
+   width: 8px;
+   height: 14px;
+   background-image: url("../img/sprite.svg#arrow-right");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}

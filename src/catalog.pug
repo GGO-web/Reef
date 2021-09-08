@@ -1,0 +1,11 @@
+extends parts/basic/head.pug
+
+block head_vars
+   - var title = "Reef - Категории товаров";
+
+block content
+   include parts/header.pug
+   include parts/components/breadcrumbs
+   main.main
+      include parts/sections/catalog.pug
+   include parts/footer.pug

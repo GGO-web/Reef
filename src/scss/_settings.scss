@@ -101,6 +101,7 @@ button {
 
 .hide-scroll {
    overflow: hidden;
+   padding-right: var(--scrollbar-width);
 }
 
 .is-hidden {
