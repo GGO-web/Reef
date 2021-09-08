@@ -7,6 +7,8 @@
 @import "common/stepper";
 @import "common/card";
 @import "common/newsletter";
+@import "common/breadcrumbs";
+@import "common/custom-checkbox";
 
 // ==!> Most Common styles <!==
 .title {
@@ -117,6 +119,15 @@
       background-position: center;
       background-size: cover;
    }
+
+   @extend %font-middle;
+}
+
+.upper-text {
+   top: -0.9em;
+   margin-left: 9px;
+   font-weight: 600;
+   color: rgba(19, 15, 44, 0.5);
 
    @extend %font-middle;
 }

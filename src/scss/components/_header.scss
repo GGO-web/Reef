@@ -8,7 +8,7 @@
    right: 0;
    top: 0;
    z-index: 10;
-   min-height: var(--header-height);
+   // min-height: var(--header-height);
    background-color: var(--color-white);
    transition: background-color 0.3s ease-in-out;
 
@@ -52,7 +52,7 @@
 
       &__login {
          position: relative;
-         z-index: 6;
+         z-index: 5;
          display: inline-block;
          flex: 0 0 24px;
          margin-right: 20px;
@@ -224,10 +224,10 @@
    }
 
    &__menu {
-      margin: 56px 0;
+      margin: 30px 0;
 
       @media (max-width: $lg) {
-         margin: 30px 0;
+         margin: 0;
       }
    }
 

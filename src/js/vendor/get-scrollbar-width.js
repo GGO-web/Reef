@@ -16,11 +16,17 @@ function getScrollbarWidth() {
    return scrollbarWidth;
 }
 
-// create a css variable(--scrollbar-width) to get the width of the scrollbar
-window.addEventListener("resize", () => {
+function setScrollbarWidth() {
    const scrollbarWidth = getScrollbarWidth();
    document.body.style.setProperty(
       "--scrollbar-width",
       scrollbarWidth + "px",
    );
-})
+}
+
+// create a css variable(--scrollbar-width) to get the width of the scrollbar
+window.addEventListener("resize", () => {
+   setScrollbarWidth();
+});
+
+setScrollbarWidth();

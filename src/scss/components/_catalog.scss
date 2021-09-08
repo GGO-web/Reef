@@ -1,0 +1,153 @@
+.catalog {
+   &__filters {
+      @media (max-width: $md) {
+         display: grid;
+         grid-gap: 10px;
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   &__filter {
+      margin-bottom: 30px;
+
+      @media (max-width: $lg) {
+         margin-bottom: 15px;
+      }
+
+      @media (max-width: $md) {
+         flex: 1 1 50%;
+      }
+   }
+
+   &__filter-list {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-in-out;
+      will-change: max-height;
+   }
+
+   &__filter-button {
+      margin-bottom: 13px;
+
+      @include responsive(font-size, $font-size-x-middle, $font-size-middle, $xxl, $sm);
+   }
+
+   &__filter-checkbox {
+      padding-left: 10px;
+   }
+
+   &__filter-item {
+      margin-bottom: 12px;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &-settings {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      &__sorting {
+         display: flex;
+         align-items: center;
+         font-size: $font-size-small;
+      }
+
+      &__sorting-label {
+         margin-right: 40px;
+      }
+
+      &__sorting-select {
+         border: none;
+         cursor: pointer;
+      }
+
+      @media (max-width: $md) {
+         flex-direction: column-reverse;
+         align-items: flex-start;
+
+         &__sorting {
+            margin-bottom: 10px;
+         }
+      }
+   }
+
+   &-selection {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-right: 20px;
+      margin-bottom: -10px;
+
+      &__item {
+         display: flex;
+         margin-right: 23px;
+         margin-bottom: 10px;
+
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+
+      &__link {
+         display: inline-flex;
+         align-items: center;
+         border: 1px solid var(--color-primary);
+         border-radius: 5px;
+         padding: 4px 5px 4px 8px;
+         height: 100%;
+         font-size: $font-size-x-small;
+         line-height: normal;
+         white-space: nowrap;
+      }
+
+      &__remove-icon {
+         display: inline-block;
+         vertical-align: middle;
+         margin-left: 15px;
+         width: 15px;
+         height: 15px;
+         background-image: url("../img/svg/cross.svg");
+         background-position: center;
+         background-size: 140%;
+         background-repeat: no-repeat;
+      }
+   }
+
+   &__inner {
+      display: flex;
+
+      @media (max-width: $md) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &__sidebar {
+      margin-right: 23px;
+
+      &-title {
+         margin: 0;
+         margin-bottom: 20px;
+
+         @include responsive(font-size, $font-size-title, $font-size-text, $xxl, $sm);
+      }
+
+      @media (max-width: $md) {
+         flex: 1 1 100%;
+         margin-right: 0;
+      }
+   }
+
+   &__main {
+      flex: 1 1 auto;
+   }
+
+   &__products {
+      display: grid;
+      grid-gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+   }
+}

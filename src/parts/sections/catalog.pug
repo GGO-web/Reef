@@ -1,0 +1,299 @@
+include ../mixins/card.pug
+
+block catalog_vars
+   -
+      var title = "Рыбки";
+      var filters = [
+         {
+            "title": "Группа",
+            "checkboxs": [
+               "вьюновые",
+               "живородящие",
+               "золотые рыбы",
+               "карповые",
+               "лабиринтовые",
+               "радужницы",
+               "рыбки Килли",
+               "сомообразные",
+               "сомики Коридорас",
+               "харациновые",
+               "хищники",
+               "цихлиды",
+            ]
+         },
+         {
+            "title": "Объем аквариума, л.",
+            "checkboxs": [
+               "до 30",
+               "до 60",
+               "до 90",
+               "до 200",
+            ]
+         },
+         {
+            "title": "Темперамент",
+            "checkboxs": [
+               "мирный",
+               "условно-мирный",
+               "неуживчивый",
+               "агрессивный",
+               "хищный",
+               "стайный",
+            ]
+         },
+         {
+            "title": "Кислотность воды, pH",
+            "checkboxs": [
+               "меньше 7",
+               "больше 7",
+            ]
+         },
+         {
+            "title": "Жесткость воды, dGH",
+            "checkboxs": [
+               "до 10",
+               "от 11 до 19",
+               "от 19",
+            ]
+         },
+      ];
+      var products = [
+         {
+            "image_src": "./img/products/product-1.png",
+            "title": "Черный телескоп <br>",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-15%",
+               },
+            ],
+            "current_price": "8,00 руб.",
+            "old_price": "10,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-2.png",
+            "title": "Креветка красная Red Cherry",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "2,5 руб.",
+            "old_price": "5,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-3.png",
+            "title": "Окатанные камни вулканической лавы серой",
+            "measure": "1&nbsp;кг.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-15%"
+               },
+            ],
+            "current_price": "8,50 руб.",
+            "old_price": "10,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-4.png",
+            "title": "Лимнобиум побегоносный",
+            "measure": "",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "1,50 руб.",
+            "old_price": "3,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-5.png",
+            "title": "Артемия сублимированная Barrom",
+            "measure": "100&nbsp;гр.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-20%"
+               },
+            ],
+            "current_price": "6,40 руб.",
+            "old_price": "8,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-6.png",
+            "title": "Драконий камень",
+            "measure": "1&nbsp;кг.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-20%"
+               },
+            ],
+            "current_price": "11,60 руб.",
+            "old_price": "14,50 руб.",
+         },
+         {
+            "image_src": "./img/products/product-4.png",
+            "title": "Лимнобиум побегоносный",
+            "measure": "",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "1,50 руб.",
+            "old_price": "3,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-2.png",
+            "title": "Креветка красная Red Cherry",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--sale",
+                  "name": "-50%"
+               },
+            ],
+            "current_price": "2,5 руб.",
+            "old_price": "5,00 руб.",
+         },
+         {
+            "image_src": "./img/products/product-7.png",
+            "title": "Анциструс альбинос золотой",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "3,00 руб.",
+            "old_price": "",
+         },
+         {
+            "image_src": "./img/products/product-8.png",
+            "title": "Кормушка Barbus 039 диаметр 7&nbsp;см.",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "5,50 руб.",
+            "old_price": "",
+         },
+         {
+            "image_src": "./img/products/product-9.png",
+            "title": "Улитка Хелена",
+            "measure": "1&nbsp;щт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "1,30 руб.",
+            "old_price": "",
+         },
+         {
+            "image_src": "./img/products/product-10.png",
+            "title": "Rikka Нитратоклин <br>",
+            "measure": "100&nbsp;мл",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "9,80 руб.",
+            "old_price": "",
+         },
+         {
+            "image_src": "./img/products/product-11.png",
+            "title": "Светодиодный светильник Barbus LED 021 длина",
+            "measure": "26&nbsp;см.",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "75,50 руб.",
+            "old_price": "",
+         },
+         {
+            "image_src": "./img/products/product-12.png",
+            "title": "Улитка Пагода",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "2,50 руб.",
+            "old_price": "",
+         },
+         {
+            "image_src": "./img/products/product-7.png",
+            "title": "Анциструс альбинос золотой",
+            "measure": "1&nbsp;шт.",
+            "tag_list": [
+               {
+                  "class": "card__tag--new",
+                  "name": "Новинка",
+               },
+            ],
+            "current_price": "3,00 руб.",
+            "old_price": "",
+         },
+      ];
+
+section.catalog.section
+   .container
+      .catalog__inner
+         aside.catalog__sidebar
+            h2.catalog__sidebar-title #{title}
+               sup.catalog__sidebar-title-indicator.upper-text 56
+            .catalog__filters
+               each filter in filters
+                  .catalog__filter
+                     button.catalog__filter-button.btn-reset(aria-expanded="true") #{filter.title}
+                     ul.catalog__filter-list
+                        each checkbox in filter.checkboxs
+                           li.catalog__filter-item.custom-checkbox
+                              label.catalog__filter-label.custom-checkbox__label
+                                 input.catalog__filter-checkbox.custom-checkbox__input(type="checkbox" name="filter")
+                                 | #{checkbox}
+                                 span.custom-checkbox__box
+         .catalog__main
+            .catalog__settings.catalog-settings
+               ul.catalog__selection.catalog-selection
+                  li.catalog-selection__item
+                     button.catalog-selection__link.catalog-selection__clear.btn-reset
+                        | сбросить все
+                        span.catalog-selection__remove-icon.btn-reset
+                  li.catalog-selection__item
+                     a.catalog-selection__link(href="#!")
+                        | мирный
+                        span.catalog-selection__remove-icon.btn-reset
+               .catalog-settings__sorting
+                  span.catalog-settings__sorting-label Сортировать по:
+                  select.catalog-settings__sorting-select
+                     option.catalog-settings__sorting-option(disabled hidden selected value="1: popularity")
+                        | популярности
+                     option.catalog-settings__sorting-option(value="1: popularity")
+                        | популярности
+                     option.catalog-settings__sorting-option(value="2: cheap")
+                        | убыванию цены
+                     option.catalog-settings__sorting-option(value="3: expensive")
+                        | возрастанию цены
+            .catalog__products
+               each prod in products
+                  +card(prod)
